@@ -28,7 +28,7 @@ const Hero = () => {
           </h2>
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Bringing ideas to life through effortless user experiences."
+            words="Bringing Ideas to Life Through Effortless User Experiences."
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;m Fredrick Bernard, a software engineer passionate about
