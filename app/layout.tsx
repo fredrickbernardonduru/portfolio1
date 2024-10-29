@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "./provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,7 +16,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Bernard's portfolio",
-  description: "Explore my portfolio of innovative projects, highlighting creativity, technical skill, and dedication to impactful solutions across diverse fields.",
+  description:
+    "Explore my portfolio of innovative projects, highlighting creativity, technical skill, and dedication to impactful solutions across diverse fields.",
 };
 
 export default function RootLayout({
@@ -28,7 +30,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
